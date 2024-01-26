@@ -1,0 +1,11 @@
+{
+    "extends": "./tsconfig.json",
+    "include": ["src/static/ts/**/*.ts"],
+    "exclude": ["node_modules"],
+    "compilerOptions": {
+        "rootDir": "./src/static/ts",
+        "outDir": "./src/static/js",
+        "module": "ESNext",
+        "moduleResolution": "Classic"
+    }
+}
