@@ -1,0 +1,11 @@
+section(class="movies-section")
+    div(class="__header")
+        h3(class="__name")= section.name
+        include ./section_progress.pug
+    div(class="__movie-overviews")
+        button(class="scroll-overviews scroll-left btn center-content-vertically")
+            include ../icons/left_chevron.pug
+        each movie in section.movies
+            include ./movie_overview.pug
+        button(class="scroll-overviews scroll-right btn center-content-vertically")
+            include ../icons/right_chevron.pug

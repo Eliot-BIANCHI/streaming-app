@@ -1,0 +1,59 @@
+.movies-section {
+    --number-of-scrolls: 0;
+    --scroll-width: 10;
+    background-color: var(--clr-pure);
+    border-radius: 5px;
+    padding: 0 0 20px 20px;
+    margin-right: 20px;
+    overflow-x: clip;
+
+    .__header {
+        display: flex;
+            justify-content: space-between;
+            align-items: center;
+        
+        .__name { padding-left: 20px; }
+
+        .__progress {
+            padding-right: 20px;
+            display: flex;
+                gap: 5px;
+        
+            .bar {
+                background-color: var(--clr-medium);
+                border-radius: 3px;
+                width: 30px;
+                height: 10px;
+
+                &[aria-selected="true"] { background-color: var(--clr-light); }
+            }
+        }
+    }
+
+    .__movie-overviews {
+        position: relative;
+        display: flex;
+            flex-wrap: nowrap;
+            gap: 15px;
+        transition: translate 250ms;
+        translate: calc(var(--number-of-scrolls) * var(--scroll-width) * 1%);
+
+        .scroll-overviews {
+            border: none;
+            z-index: 1;
+            position: absolute;
+                top: 0;
+                bottom: 0;
+            background-color: var(--clr-off);
+            opacity: 0.5;
+        
+            &.scroll-left {
+                left: 0;
+            }
+        
+            &.scroll-right {
+                right: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.btn {
+    --btn-color: var(--clr-txt);
+    border: none;
+    outline: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: var(--clr-medium);
+    border-radius: 3px;
+    color: var(--clr-txt);
+    cursor: pointer;
+    font-size: 22px;
+    padding: 15px 25px;
+    transition: background-color, border-color, 200ms;
+
+    &.blue { --btn-clr: var(--clr-blue) }
+    &.green { --btn-clr: var(--clr-green) }
+    &.yellow { --btn-clr: var(--clr-yellow) }
+    &.orange { --btn-clr: var(--clr-orange) }
+    &.red { --btn-clr: var(--clr-red) }
+    &.purple { --btn-clr: var(--clr-purple) }
+
+    &.round {
+        border-radius: 100px;
+    }
+
+    &.small {
+        font-size: 20px;
+        padding: 6px 12px;
+    }
+
+    &.large {
+        font-size: 35px;
+        padding: 20px 30px;
+    }
+
+    &.center-content-vertically {
+        align-items: center;
+    }
+
+    &:not(:disabled) {
+        border: 2px solid transparent;
+    }
+
+    &:not(:disabled):is(:hover, :focus) {
+        border-color: var(--btn-clr);
+
+        &:is(.full) { background-color: var(--btn-clr); }
+
+        &:not(.full) { background-color: var(--clr-pure); }
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.40;
+        transition: opacity 250ms;
+    }
+}

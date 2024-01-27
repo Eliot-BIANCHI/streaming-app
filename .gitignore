@@ -1,5 +1,13 @@
+# npm dependencies
 node_modules
-.env
 
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# output directories
 dist
 src/static/js

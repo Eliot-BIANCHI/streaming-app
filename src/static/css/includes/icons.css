@@ -1,0 +1,17 @@
+.magnifying-glass { 
+    fill: var(--clr-txt);
+}
+
+.navbar-chevron {
+    fill: var(--clr-txt);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: 200ms rotate;
+}
+
+.account {
+    fill: none;
+    stroke: var(--clr-txt);
+    stroke-miterlimit: 10;
+    stroke-width: 1.5px;
+}

@@ -1,0 +1,3 @@
+div(class="__progress")
+    each _, i in Array(section.movies.length)
+        span(class="bar" aria-selected=`${i === 0 ? 'true' : 'false'}`)

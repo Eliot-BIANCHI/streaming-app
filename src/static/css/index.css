@@ -1,0 +1,31 @@
+.home-main {
+    flex-grow: 1;
+    display: flex;
+        flex-direction: column;
+        gap: 15px;
+    overflow-y: scroll;
+}
+
+.movie-illustration {
+    display: flex;
+        justify-content: flex-end;
+    margin-right: 20px;
+
+    & p {
+        margin: 0;
+        /* margin-bottom: -20px; */
+        display: flex;
+            align-items: center;
+        background-color: var(--clr-pure);
+        font-size: 25px;
+        padding: 0 20px;
+        text-align: center;
+        width: 50%;
+    }
+
+    & img {
+        width: 50%;
+        /* width: 75%; */
+        /* overflow: clip; */
+    }
+}
